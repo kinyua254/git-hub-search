@@ -1,4 +1,10 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+
+import { Repo } from './classes/repo';
+import { User } from './classes/user';
+
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +12,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'GithubSearch';
+  title = 'Git-Search';
+
+
+  userData!: User;
+  repos!: any;
+
+ 
+  
+  
+
+  updateUserData(userData: User){
+    this.userData = userData
+
+  }
+
+
+  updateRepos(repos: any){
+    this.repos = repos
+
+  }
+  
+  
+
+
 }
